@@ -1,0 +1,156 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9D7ED6B9-8EE0-4C0C-97D9-059F3C662234}</ProjectGuid>
+    <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Nostra13UniversalImageLoader.SampleApp</RootNamespace>
+    <AssemblyName>SampleApp</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <AndroidApplication>true</AndroidApplication>
+    <AndroidResgenFile>Resources\Resource.Designer.cs</AndroidResgenFile>
+    <GenerateSerializationAssemblies>Off</GenerateSerializationAssemblies>
+    <AndroidUseLatestPlatformSdk>True</AndroidUseLatestPlatformSdk>
+    <TargetFrameworkVersion>v5.0</TargetFrameworkVersion>
+    <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>True</AndroidUseSharedRuntime>
+    <AndroidLinkMode>None</AndroidLinkMode>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AndroidUseSharedRuntime>False</AndroidUseSharedRuntime>
+    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Mono.Android" />
+    <Reference Include="mscorlib" />
+    <Reference Include="Square.OkHttp">
+      <HintPath>..\packages\Square.OkHttp.2.4.0.2\lib\MonoAndroid\Square.OkHttp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Square.OkIO, Version=1.5.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Square.OkIO.1.5.0.0\lib\MonoAndroid\Square.OkIO.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Xamarin.Android.Support.v4, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Xamarin.Android.Support.v4.22.2.0.0\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Activity\ComplexImageActivity.cs" />
+    <Compile Include="Activity\HomeActivity.cs" />
+    <Compile Include="Activity\SimpleImageActivity.cs" />
+    <Compile Include="Constants.cs" />
+    <Compile Include="Ext\BrokenJpegImageDecoder.cs" />
+    <Compile Include="Ext\HttpClientImageDownloader.cs" />
+    <Compile Include="Ext\OkHttpImageDownloader.cs" />
+    <Compile Include="Ext\OldRoundedBitmapDisplayer.cs" />
+    <Compile Include="Fragment\AbsListViewBaseFragment.cs" />
+    <Compile Include="Fragment\BaseFragment.cs" />
+    <Compile Include="Fragment\ImageGalleryFragment.cs" />
+    <Compile Include="Fragment\ImageGridFragment.cs" />
+    <Compile Include="Fragment\ImageListFragment.cs" />
+    <Compile Include="Fragment\ImagePagerFragment.cs" />
+    <Compile Include="Resources\Resource.Designer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UILApplication.cs" />
+    <Compile Include="Widget\UILWidgetProvider.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+    <None Include="Resources\AboutResources.txt" />
+    <None Include="Assets\AboutAssets.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\AndroidManifest.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="square.okhttp">
+      <Visible>False</Visible>
+      <Version>2.4.0.2</Version>
+    </XamarinComponentReference>
+    <XamarinComponentReference Include="xamandroidsupportv4-18">
+      <Visible>False</Visible>
+      <Version>22.2.0.0</Version>
+    </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidAsset Include="..\sample\src\main\assets\*.*">
+      <Link>Assets\%(Filename)%(Extension)</Link>
+      <!--<CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>-->
+    </AndroidAsset>
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="..\sample\src\main\res\drawable-hdpi\*.*">
+      <Link>Resources\drawable-hdpi\%(Filename)%(Extension)</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\sample\src\main\res\drawable-ldpi\*.*">
+      <Link>Resources\drawable-ldpi\%(Filename)%(Extension)</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\sample\src\main\res\drawable-mdpi\*.*">
+      <Link>Resources\drawable-mdpi\%(Filename)%(Extension)</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\sample\src\main\res\drawable-xhdpi\*.*">
+      <Link>Resources\drawable-xhdpi\%(Filename)%(Extension)</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\sample\src\main\res\drawable-xxhdpi\*.*">
+      <Link>Resources\drawable-xxhdpi\%(Filename)%(Extension)</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\sample\src\main\res\drawable-xxxhdpi\*.*">
+      <Link>Resources\drawable-xxxhdpi\%(Filename)%(Extension)</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\sample\src\main\res\layout\*.xml">
+      <Link>Resources\layout\%(Filename)%(Extension)</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\sample\src\main\res\menu\*.xml">
+      <Link>Resources\menu\%(Filename)%(Extension)</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\sample\src\main\res\values\*.xml">
+      <Link>Resources\values\%(Filename)%(Extension)</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\sample\src\main\res\values-v11\*.xml">
+      <Link>Resources\values-v11\%(Filename)%(Extension)</Link>
+    </AndroidResource>
+    <AndroidResource Include="..\sample\src\main\res\xml\*.xml">
+      <Link>Resources\xml\%(Filename)%(Extension)</Link>
+    </AndroidResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Nostra13UniversalImageLoaderBindingLib.Android\Nostra13UniversalImageLoaderBindingLib.Android.csproj">
+      <Project>{a1bda195-71ae-456d-89ab-61eb03cd980f}</Project>
+      <Name>Nostra13UniversalImageLoaderBindingLib.Android</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+     Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,38 @@
+<metadata>
+  <!--
+  This sample removes the class: android.support.v4.content.AsyncTaskLoader.LoadTask:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='AsyncTaskLoader.LoadTask']" />
+  
+  This sample removes the method: android.support.v4.content.CursorLoader.loadInBackground:
+  <remove-node path="/api/package[@name='android.support.v4.content']/class[@name='CursorLoader']/method[@name='loadInBackground']" />
+  -->
+
+  <!-- Rename namespaces -->
+  <attr path="/api/package[@name='com.nostra13.universalimageloader']" name="managedName">Nostra13UniversalImageLoader</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.cache']" name="managedName">Nostra13UniversalImageLoader.Cache</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.cache.disc']" name="managedName">Nostra13UniversalImageLoader.Cache.Disc</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.cache.disc.impl']" name="managedName">Nostra13UniversalImageLoader.Cache.Disc.Impl</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.cache.disc.impl.ext']" name="managedName">Nostra13UniversalImageLoader.Cache.Disc.Impl.Ext</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.cache.disc.naming']" name="managedName">Nostra13UniversalImageLoader.Cache.Disc.Naming</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.cache.memory']" name="managedName">Nostra13UniversalImageLoader.Cache.Memory</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.cache.memory.impl']" name="managedName">Nostra13UniversalImageLoader.Cache.Memory.Impl</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.core']" name="managedName">Nostra13UniversalImageLoader.Core</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.core.assist']" name="managedName">Nostra13UniversalImageLoader.Core.Assist</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.core.assist.deque']" name="managedName">Nostra13UniversalImageLoader.Core.Assist.Deque</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.core.decode']" name="managedName">Nostra13UniversalImageLoader.Core.Decode</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.core.display']" name="managedName">Nostra13UniversalImageLoader.Core.Display</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.core.download']" name="managedName">Nostra13UniversalImageLoader.Core.Download</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.core.imageaware']" name="managedName">Nostra13UniversalImageLoader.Core.Imageaware</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.core.listener']" name="managedName">Nostra13UniversalImageLoader.Core.Listener</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.core.process']" name="managedName">Nostra13UniversalImageLoader.Core.Process</attr>
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.utils']" name="managedName">Nostra13UniversalImageLoader.Utils</attr>
+
+  <!-- Fix weird generics return type issue -->
+  <attr path="/api/package[@name='com.nostra13.universalimageloader.core.assist.deque']/class[@name='LinkedBlockingDeque.AbstractItr']/method[@name='next']" name="return">java.lang.Object</attr>
+
+  <!-- Fix exposed members (whether as public or protected) of types that are package-visible in the original Java code -->
+  <!-- Most likely Xamarin bug: fix in the Java source code instead! -->
+  <!--<attr path="/api/package[@name='com.nostra13.universalimageloader.cache.disc.impl.ext']/class[@name='DiskLruCache']" name="visibility">public</attr>-->
+  
+
+</metadata>

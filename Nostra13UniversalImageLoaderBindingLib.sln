@@ -1,0 +1,30 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.22823.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nostra13UniversalImageLoaderBindingLib.Android", "Nostra13UniversalImageLoaderBindingLib.Android\Nostra13UniversalImageLoaderBindingLib.Android.csproj", "{A1BDA195-71AE-456D-89AB-61EB03CD980F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApp", "SampleApp\SampleApp.csproj", "{9D7ED6B9-8EE0-4C0C-97D9-059F3C662234}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A1BDA195-71AE-456D-89AB-61EB03CD980F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A1BDA195-71AE-456D-89AB-61EB03CD980F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A1BDA195-71AE-456D-89AB-61EB03CD980F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A1BDA195-71AE-456D-89AB-61EB03CD980F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D7ED6B9-8EE0-4C0C-97D9-059F3C662234}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9D7ED6B9-8EE0-4C0C-97D9-059F3C662234}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9D7ED6B9-8EE0-4C0C-97D9-059F3C662234}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9D7ED6B9-8EE0-4C0C-97D9-059F3C662234}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9D7ED6B9-8EE0-4C0C-97D9-059F3C662234}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9D7ED6B9-8EE0-4C0C-97D9-059F3C662234}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

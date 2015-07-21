@@ -1,0 +1,24 @@
+﻿<enum-field-mappings>
+  <!--
+  This example converts the constants Fragment_id, Fragment_name,
+  and Fragment_tag from android.support.v4.app.FragmentActivity.FragmentTag
+  to an enum called Android.Support.V4.App.FragmentTagType with values
+  Id, Name, and Tag.
+  
+  <mapping jni-class="android/support/v4/app/FragmentActivity$FragmentTag" clr-enum-type="Android.Support.V4.App.FragmentTagType">
+    <field jni-name="Fragment_name" clr-name="Name" value="0" />
+    <field jni-name="Fragment_id" clr-name="Id" value="1" />
+    <field jni-name="Fragment_tag" clr-name="Tag" value="2" />
+  </mapping>
+  -->
+
+  <!-- TODO: this is not successful, why?? Is it because the fields must be int constants only? -->
+  <!--<mapping jni-class="com/nostra13/universalimageloader/core/assist/FailReason$FailType" clr-enum-type="Nostra13UniversalImageLoader.Core.Assist.FailReasonType">
+    <field jni-name="IO_ERROR" clr-name="IoError" value="0" />
+    <field jni-name="DECODING_ERROR" clr-name="DecodingError" value="1" />
+    <field jni-name="NETWORK_DENIED" clr-name="NetworkDenied" value="2" />
+    <field jni-name="OUT_OF_MEMORY" clr-name="OutOfMemory" value="3" />
+    <field jni-name="UNKNOWN" clr-name="Unknown" value="4" />
+  </mapping>-->
+  
+</enum-field-mappings>
