@@ -17,17 +17,25 @@ using Android.Annotation;
 using Android.App;
 using Android.Content;
 using Android.OS;
+using Android.Runtime;
 using Nostra13UniversalImageLoader.Cache.Disc.Naming;
 using Nostra13UniversalImageLoader.Core;
 using Nostra13UniversalImageLoader.Core.Assist;
+using System;
 
 namespace Nostra13UniversalImageLoader.SampleApp
 {
     /**
      * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
      */
+    [Application(Label = "@string/app_name", Icon = "@drawable/ic_launcher", AllowBackup = false)]
     public class UILApplication : Application
     {
+        public UILApplication(IntPtr javaReference, JniHandleOwnership transfer)
+            : base(javaReference, transfer)
+        {
+        }
+
         [TargetApi(Value = (int)BuildVersionCodes.Gingerbread)]
 	    public override void OnCreate()
         {

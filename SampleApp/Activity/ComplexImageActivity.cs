@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-using Android;
+using Android.App;
 using Android.Content.Res;
 using Android.OS;
 using Android.Support.V4.App;
@@ -26,6 +26,7 @@ namespace Nostra13UniversalImageLoader.SampleApp.Activity
     /**
      * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
      */
+    [Activity(Label = "@string/ac_name_complex")]
     public class ComplexImageActivity : FragmentActivity
     {
 	    private const string STATE_POSITION = "STATE_POSITION";
@@ -55,7 +56,7 @@ namespace Nostra13UniversalImageLoader.SampleApp.Activity
             Android.Support.V4.App.Fragment listFragment;
             Android.Support.V4.App.Fragment gridFragment;
             
-            public ImagePagerAdapter(FragmentManager fm, Resources resources)
+            public ImagePagerAdapter(Android.Support.V4.App.FragmentManager fm, Resources resources)
                 : base(fm)
             {
                 mResources = resources;

@@ -13,9 +13,11 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
+using Android.App;
 using Android.Content;
 using Android.OS;
 using Android.Views;
+using Java.Interop;
 using Java.IO;
 using Java.Lang;
 using Nostra13UniversalImageLoader.Core;
@@ -28,6 +30,7 @@ namespace Nostra13UniversalImageLoader.SampleApp.Activity
     /**
      * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
      */
+    [Activity(Label = "@string/app_name", MainLauncher = true)] 
     public class HomeActivity : Android.App.Activity
     {
 	    private const string TEST_FILE_NAME = "Universal Image Loader @#&=+-_.,!()~'%20.png";
@@ -44,35 +47,40 @@ namespace Nostra13UniversalImageLoader.SampleApp.Activity
 		    }
 	    }
 
-	    public void OnImageListClick(View view)
+        [Export("onImageListClick")]
+        public void OnImageListClick(View view)
         {
 		    Intent intent = new Intent(this, typeof(SimpleImageActivity));
 		    intent.PutExtra(Constants.Extra.FRAGMENT_INDEX, ImageListFragment.INDEX);
 		    StartActivity(intent);
 	    }
 
-	    public void OnImageGridClick(View view)
+        [Export("onImageGridClick")]
+        public void OnImageGridClick(View view)
         {
 		    Intent intent = new Intent(this, typeof(SimpleImageActivity));
 		    intent.PutExtra(Constants.Extra.FRAGMENT_INDEX, ImageGridFragment.INDEX);
 		    StartActivity(intent);
 	    }
 
-	    public void OnImagePagerClick(View view)
+        [Export("onImagePagerClick")]
+        public void OnImagePagerClick(View view)
         {
 		    Intent intent = new Intent(this, typeof(SimpleImageActivity));
 		    intent.PutExtra(Constants.Extra.FRAGMENT_INDEX, ImagePagerFragment.INDEX);
 		    StartActivity(intent);
 	    }
 
-	    public void OnImageGalleryClick(View view)
+        [Export("onImageGalleryClick")]
+        public void OnImageGalleryClick(View view)
         {
 		    Intent intent = new Intent(this, typeof(SimpleImageActivity));
 		    intent.PutExtra(Constants.Extra.FRAGMENT_INDEX, ImageGalleryFragment.INDEX);
 		    StartActivity(intent);
 	    }
 
-	    public void OnFragmentsClick(View view)
+        [Export("onFragmentsClick")]
+        public void OnFragmentsClick(View view)
         {
 		    Intent intent = new Intent(this, typeof(ComplexImageActivity));
 		    StartActivity(intent);

@@ -13,6 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
+using Android.App;
 using Android.OS;
 using Android.Support.V4.App;
 using Nostra13UniversalImageLoader.SampleApp.Fragment;
@@ -22,6 +23,7 @@ namespace Nostra13UniversalImageLoader.SampleApp.Activity
     /**
      * @author Sergey Tarasevich (nostra13[at]gmail[dot]com)
      */
+    [Activity(Label = "@string/ac_name_image_list")]
     public class SimpleImageActivity : FragmentActivity
     {
 	    protected override void OnCreate(Bundle savedInstanceState)
